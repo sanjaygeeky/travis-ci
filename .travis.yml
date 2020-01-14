@@ -5,16 +5,12 @@ install:
   - mvn -N io.takari:maven:wrapper
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script: ./mvnw clean install 
-<<<<<<< HEAD
 
 jobs:
   include:
     - stage: Test
       script: ./mvnw clean test
   
-=======
->>>>>>> bb156a8b1d0d75da1febf04848876ca3296127b9
-
 notifications:
   email: sanjaygeeky@gmail.com
 before_script:
