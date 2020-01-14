@@ -1,8 +1,10 @@
 language: java
 jdk:
   - openjdk8
-
-script: ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+install:
+  - mvn -N io.takari:maven:wrapper
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script: ./mvnw clean install 
 
 notifications:
   email: sanjaygeeky@gmail.com
